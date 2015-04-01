@@ -1,0 +1,28 @@
+<script>
+(function(window, document) {
+	
+	var element = Object.create(HTMLInputElement.prototype);
+	
+	element.createdCallback = function() {
+		// we force the type to "checkbox"
+		this.type = "checkbox";
+		
+		// and set the "indeterminate" property according to the provided attribute
+		if (this.hasAttribute('indeterminate')) {
+			this.indeterminate = this.getAttribute('indeterminate') !== 'false';
+		}
+	};
+
+	element.attributeChangedCallback = function(name, oldvalue, newvalue) {
+		if (name === 'indeterminate') {
+			this.indeterminate = newvalue !== 'false';
+		}
+	};
+
+	window.TristateCheckbox = document.registerElement("tristate-checkbox", {
+		'prototype' : element,
+		'extends' : 'input'
+	});
+	
+}(window, document));
+</script>

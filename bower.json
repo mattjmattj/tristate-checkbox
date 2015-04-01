@@ -1,0 +1,19 @@
+{
+    "name": "tristate-checkbox",
+    "version": "1.0.0",
+    "description": "A checkbox that can be indeterminate",
+    "license": "MIT",
+    "main": "src/tristate-checkbox.html",
+    "keywords": [
+        "web-components",
+        "checkbox",
+        "indeterminate"
+    ],
+    "ignore": [
+        "**/.*",
+        "bower_components"
+    ],
+    "dependencies": {
+        "webcomponentsjs": "^0.5.1"
+    }
+}

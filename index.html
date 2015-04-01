@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>&lt;input is="tristate-checkbox"&gt;</title>
+
+	<!-- Importing Web Component's Polyfill -->
+	<script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+	
+	<link rel="import" href="src/tristate-checkbox.html">
+</head>
+<body>
+	<h1>Basic examples of how to use tristate-checkbox</h1>
+	<form action="" method="GET">
+		<p>To use the custom element, you must use the "is" attribute</p>
+		<pre><code>&lt;input is="tristate-checkbox" checked name="foo" id="bar"&gt;&lt;/input&gt;</code></pre>
+		<input is="tristate-checkbox" checked name="foo" id="bar"></input>
+		
+		<p>Now you can add the "indeterminate" attribute</p>
+		<pre><code>&lt;input is="tristate-checkbox" indeterminate name="qux" id="baz"&gt;&lt;/input&gt;</code></pre>
+		<input is="tristate-checkbox" indeterminate name="qux" id="baz"></input>
+
+		<p>You can also create a "tristate-checkbox" in javascript</p>
+		<pre><code>&lt;script type="text/javascript"&gt;
+	var cb = new TristateCheckbox();
+	cb.setAttribute('indeterminate',true); //or simply cb.indeterminate = true;
+	document.body.appendChild(cb);
+&lt;/script&gt;</code></pre>
+		<script type="text/javascript">
+			var cb = new TristateCheckbox();
+			cb.setAttribute('indeterminate',true); //or simply cb.indeterminate = true;
+			document.body.appendChild(cb);
+		</script>
+	</form>
+</body>
+</html>
