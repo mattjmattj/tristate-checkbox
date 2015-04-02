@@ -22,6 +22,10 @@ is not an attribute. The following example will not work as expected:
 The goal of this custom element is to allow setting the "indeterminate" property
 via an attribute.
 
+## Demo
+
+A (very ugly) live demo is available [here](http://mattjmattj.github.io/tristate-checkbox/)
+
 ## Install
 
 Install the component using [Bower](http://bower.io/):
